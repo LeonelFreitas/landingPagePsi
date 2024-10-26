@@ -1,0 +1,33 @@
+@use '../../styles/variaveis' as *;
+
+.s_sobre {
+    background-color: #D4E6F1;
+    min-height: 100vh;
+    padding-top: 4rem;
+    padding-bottom: 20px;
+}
+
+.titulo {
+    @include tituloSecao($cortext);
+    margin-bottom: 7rem; // Adiciona mais espaço abaixo do título
+}
+
+.image {
+    height: 35rem;
+    border-radius: 4rem;
+    margin-left: 4rem;
+
+    @include mq('lg') {
+        display: none;
+    }
+
+    @include mq('xl') {
+        margin-left: 3.5rem;
+        height: 30rem;
+    }
+}
+
+.desc {
+    @include descricao($cortext);
+    padding-top: 4rem; 
+}

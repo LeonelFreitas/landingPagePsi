@@ -1,0 +1,49 @@
+@use '../../styles/variaveis' as *;
+
+
+.customModal {
+    max-width: 800px; // Defina a largura desejada
+    width: 100%; // Para garantir que use a largura máxima definida
+}
+
+.s_navbar {
+    background-color: $corDescricao;
+    z-index: 0;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 5rem;
+
+    @include mq('md') {
+        display: block;
+        text-align: center;
+    }
+    @include mq('lg'){
+        display: block;
+    }
+}
+
+.imgDiv {
+
+    &__img {
+        height: 5rem;
+        padding: 0.25rem;
+
+        @media screen and (max-width: 300px) {
+            height: 2.5rem;
+        }
+    }
+}
+
+.items {
+    @include descricao($corPreto, 500);
+    margin-left: 1rem;
+    font-size: 20px;
+    font-weight: bold;
+    @include mq('md') {
+        display: none;
+    }
+}
